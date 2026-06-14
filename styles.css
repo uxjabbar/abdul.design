@@ -1,0 +1,1275 @@
+@font-face {
+  font-family: 'Aspekta';
+  src: url('Aspekta-Regular.woff2') format('woff2'),
+       url('Aspekta-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: 'Aspekta', sans-serif;
+  color: #252525;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  background: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
+}
+
+.layout {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0;
+}
+
+.profile-panel,
+.work-archive {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.profile-panel {
+  flex: 0 0 50%;
+  max-width: 50%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  align-self: flex-start;
+  gap: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.work-archive {
+  flex: 1 1 0;
+  width: auto;
+  max-width: 50%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.profile-header {
+  align-self: stretch;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 99px;
+}
+
+.avatar img {
+  width: 56px;
+  height: 56px;
+  left: -4px;
+  top: -3px;
+  position: absolute;
+}
+
+.profile-title {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: auto;
+  max-width: 100%;
+  flex: 1;
+}
+
+.profile-title p {
+  margin: 0;
+  line-height: 20px;
+  word-wrap: break-word;
+}
+
+.profile-title .intro {
+  color: #252525;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-title .subintro {
+  color: #797979;
+  font-size: 14px;
+  font-weight: 450;
+  width: auto;
+}
+
+.profile-body {
+  align-self: stretch;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.profile-copy {
+  align-self: stretch;
+  padding-right: 32px;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+@media (max-width: 1199px) {
+  .profile-copy {
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 991px) {
+  .profile-copy {
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .profile-copy {
+    padding-right: 0;
+  }
+}
+
+.profile-copy p {
+  margin: 0;
+  flex: 1 1 0;
+  color: #252525;
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 26px;
+}
+
+.profile-section {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.section-title {
+  align-self: stretch;
+  padding: 0 12px;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  color: #252525;
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 20px;
+}
+
+.skill-list {
+  width: 100%;
+  min-height: 56px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+}
+
+.chip {
+  padding: 2px 8px;
+  background: #fafafa;
+  border-radius: 4px;
+  outline: 1px solid #f1f1f1;
+  outline-offset: -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chip span {
+  color: #252525;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.experience-list {
+  align-self: stretch;
+  padding-right: 56px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1199px) {
+  .experience-list {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .experience-list {
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .experience-list {
+    padding-right: 0;
+  }
+}
+
+.experience-row {
+  align-self: stretch;
+  padding: 8px 12px;
+  border-bottom: 1px solid #f1f1f1;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.experience-row .company {
+  color: #252525;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.experience-row .role {
+  flex: 1 1 0;
+  text-align: right;
+  color: #797979;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 20px;
+}
+
+.footer-row {
+  align-self: stretch;
+  padding-right: 24px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1199px) {
+  .footer-row {
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer-row {
+    padding-right: 0;
+  }
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  background: #fafafa;
+  border-radius: 12px;
+  outline: 1px solid #f1f1f1;
+  outline-offset: -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-inner {
+  width: 32px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-inner img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
+
+.icon-graphic {
+  flex: 1 1 0;
+  height: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-graphic div {
+  position: absolute;
+  background: #252525;
+}
+
+.icon-instagram .shape-1 {
+  width: 15.99px;
+  height: 16px;
+  left: 0;
+  top: 0;
+}
+
+.icon-instagram .shape-2 {
+  width: 8.22px;
+  height: 8.22px;
+  left: 3.89px;
+  top: 3.89px;
+}
+
+.icon-instagram .shape-3 {
+  width: 1.92px;
+  height: 1.92px;
+  left: 11.31px;
+  top: 2.77px;
+}
+
+.icon-twitter .shape-1 {
+  width: 14.67px;
+  height: 13.26px;
+  left: 0.67px;
+  top: 1.27px;
+}
+
+.icon-linkedin .shape-1,
+.icon-dribbble .shape-1 {
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 0;
+}
+
+.resume-action {
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.resume-text {
+  color: #797979;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+}
+
+.resume-dot {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-dot::before {
+  content: "";
+  position: absolute;
+  left: 4.67px;
+  top: 4.67px;
+  width: 6.67px;
+  height: 6.67px;
+  outline: 1.5px solid #797979;
+  outline-offset: -0.75px;
+}
+
+.resume-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  display: inline-block;
+  object-fit: contain;
+}
+
+.archive-header {
+  flex-shrink: 0;
+  align-self: stretch;
+  padding: 0 0 8px 0;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.archive-header .title {
+  color: #252525;
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 20px;
+}
+
+.archive-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.archive-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.archive-icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  display: inline-block;
+  object-fit: contain;
+}
+
+.archive-link span {
+  color: #b5b5b5;
+  font-size: 12px;
+  font-weight: 550;
+  text-transform: uppercase;
+  line-height: 16px;
+  letter-spacing: 0.24px;
+}
+
+.archive-link .dot {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.archive-link .dot::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  outline: 1.2px solid #b5b5b5;
+  outline-offset: -0.6px;
+}
+
+.archive-link.scroll .dot::before {
+  height: 4px;
+  top: 6px;
+}
+
+.archive-list {
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 16px 12px 16px 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.archive-card {
+  flex-shrink: 0;
+  align-self: stretch;
+  aspect-ratio: 785 / 659;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  scroll-snap-align: start;
+  scroll-snap-stop: auto;
+}
+
+.archive-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  background: #ffffff;
+}
+
+.archive-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.archive-list::-webkit-scrollbar-thumb {
+  background: rgba(37, 37, 37, 0.2);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.archive-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 37, 37, 0.4);
+}
+
+.archive-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - COMPREHENSIVE BREAKPOINTS
+   ============================================ */
+
+/* Large Desktop (1440px+) - PRESERVE EXACTLY */
+@media (min-width: 1440px) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .page {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .layout {
+    height: 100%;
+  }
+
+  .profile-panel {
+    max-width: 50%;
+    padding: 40px;
+  }
+
+  .work-archive {
+    max-width: 50%;
+    padding: 40px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .archive-list {
+    overflow-y: visible;
+  }
+
+  .profile-copy p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+/* Large Laptop (1200px - 1439px) - Slight reductions */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .page {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .layout {
+    height: 100%;
+  }
+
+  .profile-panel {
+    max-width: 50%;
+    padding: 36px;
+    gap: 20px;
+  }
+
+  .work-archive {
+    max-width: 50%;
+    padding: 36px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .archive-list {
+    gap: 10px;
+    padding: 12px 10px 12px 0;
+    overflow-y: visible;
+  }
+
+  .profile-copy {
+    padding-right: 24px;
+  }
+
+  .profile-copy p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .profile-title {
+    width: auto;
+  }
+
+  .skill-list {
+    width: 100%;
+    gap: 6px;
+  }
+}
+
+/* Large Tablet Landscape (992px - 1199px) - Vertical flow, remove sticky */
+@media (max-width: 1199px) and (min-width: 992px) {
+  html,
+  body {
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .page {
+    height: auto;
+    overflow: visible;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .layout {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+  }
+
+  .profile-panel {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 32px;
+    gap: 18px;
+    overflow: visible;
+    flex-shrink: auto;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .work-archive {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 32px;
+    overflow: visible;
+    flex-grow: auto;
+  }
+
+  .archive-list {
+    height: auto;
+    overflow-y: visible;
+    padding: 0;
+    gap: 12px;
+  }
+
+  .archive-card {
+    flex-shrink: 0;
+  }
+
+  .profile-copy {
+    padding-right: 16px;
+  }
+
+  .profile-copy p {
+    font-size: 17px;
+    line-height: 23px;
+  }
+
+  .profile-title {
+    width: auto;
+  }
+
+  .skill-list {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .experience-list {
+    padding-right: 32px;
+  }
+}
+
+/* Tablet Portrait (768px - 991px) - Single column */
+@media (max-width: 991px) and (min-width: 768px) {
+  html,
+  body {
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .page {
+    height: auto;
+    overflow: visible;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .layout {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+    width: 100%;
+  }
+
+  .profile-panel {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 28px;
+    gap: 16px;
+    overflow: visible;
+    flex-shrink: auto;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .work-archive {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 28px;
+    overflow: visible;
+    flex-grow: auto;
+  }
+
+  .archive-header {
+    margin-bottom: 16px;
+  }
+
+  .archive-list {
+    height: auto;
+    overflow-y: visible;
+    padding: 0;
+    gap: 12px;
+  }
+
+  /* archive-card uses aspect-ratio for responsive sizing */
+
+  .profile-header {
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+
+  .avatar img {
+    width: 52px;
+    height: 52px;
+    left: -4px;
+    top: -4px;
+  }
+
+  .profile-title {
+    width: auto;
+  }
+
+  .profile-title .intro {
+    font-size: 13px;
+  }
+
+  .profile-title .subintro {
+    font-size: 12px;
+    width: auto;
+  }
+
+  .profile-copy p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .skill-list {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .chip {
+    padding: 2px 6px;
+  }
+
+  .chip span {
+    font-size: 13px;
+  }
+
+  .experience-list {
+    padding-right: 0;
+  }
+
+  .experience-row {
+    padding: 6px 8px;
+  }
+
+  .icon-box {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon-inner {
+    width: 28px;
+  }
+
+  .icon-inner img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Mobile (576px - 767px) - Fully stacked */
+@media (max-width: 767px) and (min-width: 576px) {
+  html,
+  body {
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .page {
+    height: auto;
+    overflow: visible;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .layout {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+    width: 100%;
+  }
+
+  .profile-panel {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 20px;
+    gap: 14px;
+    overflow: visible;
+    flex-shrink: auto;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .work-archive {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    overflow: visible;
+    flex-grow: auto;
+  }
+
+  .archive-header {
+    margin-bottom: 12px;
+    padding: 0;
+  }
+
+  .archive-links {
+    gap: 12px;
+  }
+
+  .archive-list {
+    height: auto;
+    overflow-y: visible;
+    padding: 0;
+    gap: 10px;
+  }
+
+  /* archive-card uses aspect-ratio for responsive sizing */
+
+  .archive-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    display: block;
+  }
+
+  .profile-header {
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .avatar img {
+    width: 48px;
+    height: 48px;
+    left: -4px;
+    top: -4px;
+  }
+
+  .profile-title {
+    width: auto;
+    height: auto;
+  }
+
+  .profile-title .intro {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .profile-title .subintro {
+    font-size: 11px;
+    width: auto;
+  }
+
+  .profile-body {
+    gap: 24px;
+  }
+
+  .profile-copy p {
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 0;
+  }
+
+  .profile-copy {
+    padding-right: 0;
+  }
+
+  .profile-section {
+    gap: 10px;
+  }
+
+  .section-title {
+    font-size: 12px;
+    padding: 0 8px;
+  }
+
+  .skill-list {
+    width: 100%;
+    gap: 5px;
+    min-height: auto;
+  }
+
+  .chip {
+    padding: 2px 6px;
+  }
+
+  .chip span {
+    font-size: 12px;
+  }
+
+  .experience-list {
+    padding-right: 0;
+  }
+
+  .experience-row {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+
+  .experience-row .company {
+    font-size: 11px;
+  }
+
+  .experience-row .role {
+    font-size: 11px;
+  }
+
+  .footer-row {
+    padding-right: 0;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .social-list {
+    gap: 6px;
+  }
+
+  .icon-box {
+    width: 32px;
+    height: 32px;
+    padding: 2px;
+  }
+
+  .icon-inner {
+    width: 26px;
+  }
+
+  .icon-inner img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .resume-text {
+    font-size: 12px;
+  }
+
+  .resume-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Small Mobile (320px - 575px) - Optimize for narrow screens */
+@media (max-width: 575px) {
+  html,
+  body {
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 14px;
+  }
+
+  .page {
+    height: auto;
+    overflow: visible;
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .layout {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+    width: 100%;
+  }
+
+  .profile-panel {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 16px;
+    gap: 12px;
+    overflow: visible;
+    flex-shrink: auto;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .work-archive {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    overflow: visible;
+    flex-grow: auto;
+  }
+
+  .archive-header {
+    margin-bottom: 10px;
+    padding: 0;
+    gap: 8px;
+  }
+
+  .archive-header .title {
+    font-size: 12px;
+  }
+
+  .archive-links {
+    gap: 8px;
+  }
+
+  .archive-link {
+    gap: 4px;
+  }
+
+  .archive-link span {
+    font-size: 10px;
+  }
+
+  .archive-icon {
+    width: 10px;
+    height: 10px;
+  }
+
+  .archive-list {
+    height: auto;
+    overflow-y: visible;
+    padding: 0;
+    gap: 8px;
+  }
+
+  /* archive-card uses aspect-ratio for responsive sizing */
+
+  .archive-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    display: block;
+  }
+
+  .profile-header {
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .avatar img {
+    width: 44px;
+    height: 44px;
+    left: -4px;
+    top: -4px;
+  }
+
+  .profile-title {
+    width: auto;
+    height: auto;
+  }
+
+  .profile-title .intro {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  .profile-title .subintro {
+    font-size: 10px;
+    width: auto;
+    line-height: 14px;
+  }
+
+  .profile-body {
+    gap: 18px;
+  }
+
+  .profile-copy {
+    padding-right: 0;
+    gap: 4px;
+  }
+
+  .profile-copy p {
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    word-break: break-word;
+  }
+
+  .profile-section {
+    gap: 8px;
+  }
+
+  .section-title {
+    font-size: 11px;
+    font-weight: 550;
+    padding: 0 6px;
+    line-height: 16px;
+  }
+
+  .skill-list {
+    width: 100%;
+    gap: 4px;
+    min-height: auto;
+  }
+
+  .chip {
+    padding: 1px 5px;
+  }
+
+  .chip span {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .experience-list {
+    padding-right: 0;
+  }
+
+  .experience-row {
+    padding: 3px 4px;
+    gap: 4px;
+    font-size: 10px;
+  }
+
+  .experience-row .company {
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .experience-row .role {
+    font-size: 9px;
+    font-weight: 400;
+  }
+
+  .footer-row {
+    padding-right: 0;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .social-list {
+    gap: 4px;
+  }
+
+  .icon-box {
+    width: 28px;
+    height: 28px;
+    padding: 2px;
+  }
+
+  .icon-inner {
+    width: 24px;
+  }
+
+  .icon-inner img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .resume-action {
+    gap: 8px;
+  }
+
+  .resume-text {
+    font-size: 10px;
+    letter-spacing: 0.2px;
+  }
+
+  .resume-icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+  }
+}
