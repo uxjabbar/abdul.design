@@ -188,7 +188,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 16px;
+  gap: 8px;
 }
 
 @media (max-width: 1199px) {
@@ -1213,7 +1213,6 @@ body {
 
   .profile-copy {
     padding-right: 0;
-    gap: 12px;
   }
 
   .profile-copy p {
