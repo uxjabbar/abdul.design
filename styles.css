@@ -365,8 +365,8 @@ body {
 }
 
 .icon-inner img {
-  width: 32px;
-  height: 32px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
   display: block;
 }
@@ -883,8 +883,8 @@ body {
   }
 
   .icon-inner img {
-    width: 28px;
-    height: 28px;
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -1066,8 +1066,8 @@ body {
   }
 
   .icon-inner img {
-    width: 26px;
-    height: 26px;
+    width: 13px;
+    height: 13px;
   }
 
   .resume-text {
@@ -1288,8 +1288,8 @@ body {
   }
 
   .icon-inner img {
-    width: 24px;
-    height: 24px;
+    width: 11px;
+    height: 11px;
   }
 
   .resume-action {
