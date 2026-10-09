@@ -1,8 +1,9 @@
+/* Aspekta by Ivo Dolenc - SIL Open Font License 1.1 - see fonts/LICENSE-Aspekta.txt */
 @font-face {
   font-family: 'Aspekta';
-  src: url('Aspekta-Regular.woff2') format('woff2'),
-       url('Aspekta-Regular.woff') format('woff');
-  font-weight: 400;
+  src: url('fonts/AspektaVF.woff2') format('woff2-variations'),
+       url('fonts/AspektaVF.woff2') format('woff2');
+  font-weight: 50 1000;
   font-style: normal;
   font-display: swap;
 }
@@ -85,7 +86,7 @@ body {
 
 .profile-header {
   align-self: stretch;
-  display: inline-flex;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 12px;
@@ -101,11 +102,13 @@ body {
 }
 
 .avatar img {
-  width: 56px;
-  height: 56px;
-  left: -4px;
-  top: -3px;
+  width: 100%;
+  height: 100%;
   position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  object-position: center;
 }
 
 .profile-title {
@@ -115,7 +118,8 @@ body {
   align-items: flex-start;
   width: auto;
   max-width: 100%;
-  flex: 1;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .profile-title p {
@@ -135,6 +139,36 @@ body {
   font-size: 14px;
   font-weight: 450;
   width: auto;
+}
+
+.availability-badge {
+  margin-left: auto;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px 3px 8px;
+  background: #f4fbf6;
+  border-radius: 99px;
+  outline: 1px solid #dcefe2;
+  outline-offset: -1px;
+  white-space: nowrap;
+}
+
+.availability-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 99px;
+  background: #27ae60;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.14);
+  flex: 0 0 auto;
+}
+
+.availability-text {
+  color: #1f7a45;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .profile-body {
